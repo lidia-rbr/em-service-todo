@@ -1,0 +1,70 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --headers: #009879;
+  --background-even-row: #f3f3f3;
+  --secondary-color: #d8eadc;
+  --dark-color: #016876;
+  --table-border: #dddddd;
+  --background-color: #364b44;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--background-color);
+}
+
+.button {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: var(--dark-color);
+  width: fit-content;
+  height: 30px;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.details-table td {
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+
+.details-firstCol {
+  background-color: white;
+  color:black
+}
+
+td {
+  color: white;
+} 
