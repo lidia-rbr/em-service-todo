@@ -43,7 +43,7 @@ function updateTable(toDoMap) {
     seeDetailsIcon.addEventListener("click", function (event) {
       event.stopPropagation(); // Prevent row click event from firing
       localStorage.setItem("taskDetails", JSON.stringify(item));
-      window.location.href = `details.html?id=${item.id}`;
+      window.location.href = `../details/details.html?id=${item.id}`;
     });
 
     row.appendChild(cellDescription);
@@ -53,6 +53,10 @@ function updateTable(toDoMap) {
     row.appendChild(cellActions);
     tableBody.appendChild(row);
   });
+}
+
+function displayAddForm() {
+  window.location.href = `../add/add.html`;
 }
 
 // function displayTaskDetails(taskDetails) {
@@ -105,16 +109,16 @@ function updateTable(toDoMap) {
 document.addEventListener("DOMContentLoaded", function () {
   getToDoList();
 
-  const modal = document.getElementById("myModal");
-  const span = document.getElementsByClassName("close")[0];
+  // const modal = document.getElementById("myModal");
+  // const span = document.getElementsByClassName("close")[0];
 
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
+  // span.onclick = function () {
+  //   modal.style.display = "none";
+  // };
 
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
+  // window.onclick = function (event) {
+  //   if (event.target == modal) {
+  //     modal.style.display = "none";
+  //   }
+  // };
 });

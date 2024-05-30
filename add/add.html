@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Details</title>
+    <script src="add.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8cf4993677.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="details-title-container">
+      <div class="go-back-button-container">
+        <button class="go-back-button" onclick="goToIndex()">< Go back</button>
+      </div>
+      <div class="details-title">
+        <h1>Add a new task</h1>
+      </div>
+    </div>
+    <div class="details-table-container">
+      <table class="add-table">
+        <tbody>
+          <tr>
+            <td class="add-firstCol">Description:</td>
+            <td>
+              <input type="text" id="description" name="description" />
+            </td>
+          </tr>
+          <tr>
+            <td class="add-firstCol">Tags:</td>
+            <td>
+              <input type="text" id="tags" name="description" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button class="add-button" id="add" onclick="addNewTodo()">Add</button>
+      </div>
+    </div>
+  </body>
+</html>
