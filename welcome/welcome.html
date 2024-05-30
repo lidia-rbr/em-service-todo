@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Details</title>
+    <script src="welcome.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8cf4993677.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="welcome-container">
+        <label class="name-label">
+            Please enter your name:
+        </label>
+        <input class="name-input" type="text" id="name" name="name"/>
+      <div class="welcome-button-container ">
+        <button class="continue-button" onclick="goToIndexIfNameIsValid()">
+          Continue
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

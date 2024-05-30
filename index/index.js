@@ -59,66 +59,14 @@ function displayAddForm() {
   window.location.href = `../add/add.html`;
 }
 
-// function displayTaskDetails(taskDetails) {
-//   document.getElementById("description-details").textContent = taskDetails.text;
-//   document.getElementById("tags-details").textContent = taskDetails.Tags;
-//   document.getElementById("status-details").textContent =
-//     taskDetails.is_complete;
-//   document.getElementById("date-details").textContent = taskDetails.created_at;
-
-//   const modifyButton = document.getElementById("modify-button");
-//   modifyButton.textContent = "Modify";
-//   modifyButton.removeEventListener("click", saveChangesHandler);
-//   modifyButton.addEventListener("click", modifyHandler);
-// }
-
-// function modifyHandler() {
-//   const descriptionDetails = document.getElementById("description-details");
-//   const tagsDetails = document.getElementById("tags-details");
-//   const statusDetails = document.getElementById("status-details");
-//   const dateDetails = document.getElementById("date-details");
-
-//   descriptionDetails.innerHTML = `<input type="text" id="description-input" value="${descriptionDetails.textContent}">`;
-//   tagsDetails.innerHTML = `<input type="text" id="tags-input" value="${tagsDetails.textContent}">`;
-//   statusDetails.innerHTML = `<input type="text" id="status-input" value="${statusDetails.textContent}">`;
-//   dateDetails.innerHTML = `<input type="text" id="date-input" value="${dateDetails.textContent}">`;
-
-//   const modifyButton = document.getElementById("modify-button");
-//   modifyButton.textContent = "Save";
-//   modifyButton.removeEventListener("click", modifyHandler);
-//   modifyButton.addEventListener("click", saveChangesHandler);
-// }
-
-// function saveChangesHandler() {
-//   const dataArray = JSON.parse(localStorage.getItem("dataArray")) || [];
-
-//   const index = parseInt(
-//     document.querySelector("#data-table tbody tr[data-index]").dataset.index
-//   );
-//   dataArray[index].text = document.getElementById("description-input").value;
-//   dataArray[index].Tags = document.getElementById("tags-input").value;
-//   dataArray[index].is_complete = document.getElementById("status-input").value;
-//   dataArray[index].created_at = document.getElementById("date-input").value;
-
-//   localStorage.setItem("dataArray", JSON.stringify(dataArray));
-
-//   updateTable(dataArray);
-//   document.getElementById("myModal").style.display = "none";
-// }
-
 document.addEventListener("DOMContentLoaded", function () {
   getToDoList();
 
-  // const modal = document.getElementById("myModal");
-  // const span = document.getElementsByClassName("close")[0];
-
-  // span.onclick = function () {
-  //   modal.style.display = "none";
-  // };
-
-  // window.onclick = function (event) {
-  //   if (event.target == modal) {
-  //     modal.style.display = "none";
-  //   }
-  // };
+  // Display user name in title
+  let userName = localStorage.getItem("userName");
+  if (userName.startsWith('"') && userName.endsWith('"')) {
+    userName = userName.slice(1, -1);
+  }
+  document.getElementById("userName").innerText = userName;
+  console.log(userName);
 });
