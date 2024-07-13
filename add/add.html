@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Details</title>
-    <script src="add.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -32,13 +31,24 @@
           <tr>
             <td class="add-firstCol">Description:</td>
             <td>
-              <input class="add-input" type="text" id="description" name="description" />
+              <input
+                class="add-input"
+                type="text"
+                id="description"
+                name="description"
+              />
             </td>
           </tr>
           <tr>
-            <td class="add-firstCol">Tags:</td>
-            <td>
-              <input class="add-input" type="text" id="tags" name="description" />
+            <td class="add-firstCol">Tag:</td>
+            <td class="tag-cell">
+              <input
+                class="add-input"
+                type="text"
+                id="tags"
+                name="description"
+              />
+              <button class="add-tag" onclick="addTagRow()">+</button>
             </td>
           </tr>
         </tbody>
@@ -47,5 +57,6 @@
         <button class="add-button" id="add" onclick="addNewTodo()">Add</button>
       </div>
     </div>
+    <script src="add.js"></script>
   </body>
 </html>

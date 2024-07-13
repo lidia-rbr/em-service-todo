@@ -59,6 +59,10 @@ function displayAddForm() {
   window.location.href = `../add/add.html`;
 }
 
+function goToStats() {
+  window.location.href = `../Stats/Stats.html`;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   getToDoList();
 

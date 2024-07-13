@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       taskDetails.is_complete;
     document.getElementById("date-details").textContent =
       taskDetails.created_at;
-    console.log(taskDetails);
-    if (taskDetails.is_complete == true) {
+    if (taskDetails.is_complete === "true") {
       button.textContent = "Mark as not complete";
     } else {
       button.textContent = "Mark as complete";

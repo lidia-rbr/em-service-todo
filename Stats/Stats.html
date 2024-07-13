@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Details</title>
+    <script src="Stats.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8cf4993677.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="stats-title-container">
+      <div class="go-back-button-container">
+        <button class="go-back-button" onclick="goToIndex()">< Go back</button>
+    </div>
+      <div class="stats-title">
+        <h1>Stats</h1>
+      </div>
+    </div>
+    <div class="stats-table-container">
+      <table class="stats-table">
+        <tbody>
+          <tr class="all-row">
+            <td class="stats-firstCol">Nb of tasks:</td>
+            <td class="stat-value">
+              <p id="nbOfTasks"></p>
+            </td>
+          </tr>
+          <tr class="open-row">
+            <td class="stats-firstCol">Open:</td>
+            <td class="stat-value">
+              <p id="nbOfOpenTasks"></p>
+            </td>
+          </tr>
+          <tr  class="close-row">
+            <td class="stats-firstCol">Close:</td>
+            <td class="stat-value">
+              <p id="nbOfCloseTasks"></p>
+            </td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

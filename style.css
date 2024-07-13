@@ -80,9 +80,9 @@ body {
 }
 
 .welcome-button-container {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
 }
 
 .welcome-container {
@@ -94,21 +94,21 @@ body {
 }
 
 .name-label {
-    color:white;
-    font-family: poppins;
+  color: white;
+  font-family: poppins;
 }
 
 .name-input {
-    padding-top:3px;
-    border-width: 1px;
-    border-radius: 8px;
-    padding-left: 10px;
-    font-family: 'Poppins';
+  padding-top: 3px;
+  border-width: 1px;
+  border-radius: 8px;
+  padding-left: 10px;
+  font-family: "Poppins";
 }
 
 .invalid {
-    border-color: red;
-    border-width: 2px;
+  border-color: red;
+  border-width: 2px;
 }
 
 /* ----------------INDEX---------------- */
@@ -138,7 +138,6 @@ body {
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: normal;
@@ -417,6 +416,95 @@ td {
   color: white;
 }
 
+/* ----------------Stats---------------- */
+
+.stats-title-container {
+  display: flex;
+  width: 40%;
+  margin: auto;
+  height: 10vh;
+  align-items: center;
+}
+
+.stats-title {
+  float: right;
+  color: white;
+  margin-left: auto;
+}
+
+.stats-table-container {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+  flex-direction: column;
+}
+
+.stats-table {
+  border-collapse: collapse;
+}
+
+.stats-table td {
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+
+.stats-firstCol {
+  color: black;
+  width: 50%;
+}
+
+.all-row {
+  background-color: var(--dark-color);
+}
+
+.open-row {
+  background-color: #eca1a1;
+}
+
+.close-row {
+  background-color: #80c090;
+}
+
+.stat-value {
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.stats-button {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #FFA17A;
+  width: fit-content;
+  height: 30px;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  margin-right: 10px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
 /* ----------------ADD---------------- */
 
 .add-input {
@@ -424,6 +512,7 @@ td {
   border: none;
   height: 100%;
   padding: 0px;
+  float:left;
   width: 98%;
   color: white;
   padding-left: 2%;
@@ -443,4 +532,39 @@ td {
   background-color: white;
   padding-left: 10px !important;
   color: black;
+}
+
+.tag-cell {
+  display:flex;
+}
+
+.add-tag {
+  float:right;
+  margin-right:auto;
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #FFA17A;
+  width: fit-content;
+  border-style: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
 }
