@@ -51,8 +51,8 @@ function addNewTodo() {
   }
 }
 
-function goToIndex() {
-  window.location.href = `../index/index.html`;
+function goToDo() {
+  window.location.href = `../todo/todo.html`;
 }
 
 function addTagRow() {
