@@ -4,12 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const dataArray = JSON.parse(localStorage.getItem("dataArray"));
   const taskDetails = dataArray.find((task) => task.id == taskId);
   const button = document.getElementById("change-status");
-  console.log("taskId", taskId);
-  console.log("dataArray", dataArray);
-  console.log("taskDetails", taskDetails);
   if (taskDetails) {
-    document.getElementById("id-details").textContent =
-    taskDetails.id;
+    document.getElementById("id-details").textContent = taskDetails.id;
     document.getElementById("description-details").textContent =
       taskDetails.text;
     document.getElementById("tags-details").textContent = taskDetails.Tags;
@@ -17,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       taskDetails.is_complete;
     document.getElementById("date-details").textContent =
       taskDetails.created_at;
-    if (taskDetails.is_complete === "true") {
+    if (taskDetails.is_complete === true) {
       button.textContent = "Mark as not complete";
     } else {
       button.textContent = "Mark as complete";
@@ -42,7 +38,7 @@ async function updateStatus(status) {
   const taskDetails = dataArray.find((task) => task.id == taskId);
   taskDetails["is_complete"] = status;
   try {
-    fetch(`http://localhost:3000/todos/${taskId}`, {
+    fetch(`https://api-todos.glitch.me/todos/${taskId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -53,15 +49,13 @@ async function updateStatus(status) {
         if (!response.ok) {
           throw new Error("Failed to modify task");
         }
-        return response.json(); // Parse response JSON
+        return response.json();
       })
       .then((data) => {
-        // Handle success response
         console.log("Task modified successfully:", data);
-        window.location.href = `../index/index.html`;
+        window.location.href = `../todo/todo.html`;
       })
       .catch((error) => {
-        // Handle error
         console.error("Error modifying task:", error);
       });
   } catch (e) {
@@ -72,13 +66,13 @@ async function updateStatus(status) {
 function deleteThisTodo() {
   const urlParams = new URLSearchParams(window.location.search);
   const taskId = urlParams.get("id");
-  console.log(taskId)
+  console.log(taskId);
   try {
-    fetch(`http://localhost:3000/todos/${taskId}`, {
+    fetch(`https://api-todos.glitch.me/todos/${taskId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-      }
+      },
     })
       .then((response) => {
         if (!response.ok) {
@@ -94,7 +88,7 @@ function deleteThisTodo() {
       .then((data) => {
         // Handle success response
         console.log("Task modified deleted:", data);
-        window.location.href = `../index/index.html`;
+        window.location.href = `../todo/todo.html`;
       })
       .catch((error) => {
         // Handle error

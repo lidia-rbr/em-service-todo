@@ -21,7 +21,7 @@ function addNewTodo() {
     };
 
     try {
-      fetch(`http://localhost:3000/todos`, {
+      fetch(`https://api-todos.glitch.me/todos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ function addNewTodo() {
         .then((data) => {
           // Handle success response
           console.log("Added succesfully");
-          window.location.href = `../index/index.html`;
+          window.location.href = `../todo/todo.html`;
         })
         .catch((error) => {
           // Handle error

@@ -1,6 +1,6 @@
 async function getToDoList() {
   try {
-    const response = await fetch("http://localhost:3000/todos");
+    const response = await fetch("https://api-todos.glitch.me/todos");
     const res = await response.json();
 
     // Store the data in localStorage
